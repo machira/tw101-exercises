@@ -13,5 +13,12 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Monster> monsters = new ArrayList<Monster>();
+        monsters.add(new Troll());
+        monsters.add(new Orc());
+        for (Monster monster:monsters){
+            monster.takeDamage(10);
+            System.out.println(monster.reportStatus());
+        }
+
     }
 }
